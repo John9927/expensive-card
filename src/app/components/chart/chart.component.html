@@ -1,0 +1,29 @@
+<div class="container__card">
+  <div class="card">
+    <div class="top__card">
+      <div class="title">
+        <span class="label__title">My Balance</span>
+        <span class="amount">${{amount$}}</span>
+      </div>
+      <div class="container__logo">
+        <img src="./../../../assets/logo.svg" class="img__logo">
+      </div>
+    </div>
+
+    <div class="container__bottom__card">
+      <div class="bottom__card">
+        <span class="label__bottom__card">Spending - Last 7 days</span>
+
+        <div class="container__graph">
+          <div class="graph" [ngStyle]="{'height':d.amount + 'px'}" *ngFor="let d of datas" >
+            <div class="day">
+              {{d.day}}
+            </div>
+          </div>
+        </div>
+
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
